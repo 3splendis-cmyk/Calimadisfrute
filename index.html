@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/tailwind.css">
 <link rel="stylesheet" href="css/fontawesome.css">
 <link rel="stylesheet" href="css/style.css">
+<style>@media(min-width:768px){h1[style*="font-size:42px"]{font-size:52px !important}}</style>
 </head>
 <body class="font-sans bg-[#F0F7FF] text-gray-800">
 
@@ -62,14 +63,14 @@
 </nav>
 
 <!-- HERO original Vitour - como al principio -->
-<section class="relative overflow-hidden bg-[#0B1C33] min-h-[640px] flex flex-col">
+<section class="relative overflow-hidden bg-[#0B1C33] min-h-[680px] flex flex-col">
   <div class="absolute inset-0 flex">
-    <div class="w-[48%] bg-[#0B1C33] hidden lg:block"></div>
+    <div class="hidden lg:block" style="width:46%;background:#0B1C33"></div>
     <div class="flex-1 relative">
       <img id="heroBg" src="img/hero1.jpg" alt="Calima Darien" class="w-full h-full object-cover object-center" style="transition:opacity .4s">
-      <div class="absolute inset-0 bg-[#0B1C33]/65 lg:hidden"></div>
+      <div class="absolute inset-0 lg:hidden" style="background:rgba(11,28,51,0.45)"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#0B1C33] via-transparent to-transparent lg:via-[#0B1C33]/20 hidden lg:block"></div>
-      <img src="img/hiker.jpg" alt="Hiker" class="hidden lg:block absolute right-[12%] bottom-0 h-[92%] w-auto object-contain drop-shadow-2xl" style="mask-image: linear-gradient(to bottom, black 85%, transparent);">
+      <img src="img/hiker.jpg" alt="Hiker" class="hidden lg:block absolute right-[10%] bottom-0 h-[88%] w-auto object-contain drop-shadow-2xl" style="mask-image: linear-gradient(to bottom, black 90%, transparent);filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3))">
       <div class="hidden lg:block absolute top-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur border border-white/20 border-dashed px-4 py-2 rounded">
         <span class="font-sans italic text-lg flex items-center gap-2" style="color:#7ED321">Booking</span>
         <div class="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2" style="border-color:#7ED321"></div>
@@ -85,55 +86,16 @@
     </div>
   </div>
   <div class="absolute inset-0 hidden lg:block pointer-events-none">
-    <svg class="absolute left-[48%] top-0 h-full w-[120px]" viewBox="0 0 120 640" preserveAspectRatio="none"><path d="M0 0 L60 0 L120 640 L0 640 Z" fill="#0B1C33"/></svg>
+    <svg class="absolute top-0 h-full" style="left:46%;width:100px" viewBox="0 0 120 640" preserveAspectRatio="none"><path d="M0 0 L60 0 L120 640 L0 640 Z" fill="#0B1C33"/></svg>
   </div>
   <div class="relative z-10 flex-1 flex items-center max-w-[1320px] mx-auto px-4 md:px-8 w-full py-12 lg:py-0">
     <div class="w-full lg:w-[520px] pt-6 lg:pt-0">
-      <p class="font-sans italic text-lg mb-2" style="color:#7ED321">Explora el mundo</p>
-      <h1 class="font-sans font-black text-white leading-[0.95] text-[42px] md:text-[52px] tracking-tight">VIAJES Y<br>AVENTURA CAMPAMENTO</h1>
-      <p class="text-white/60 text-[13px] leading-relaxed mt-4 max-w-[440px]">Bienvenido a Calima El Darien, corazon del Valle del Cauca. Lago Calima, el embalse mas grande de Colombia, vientos perfectos para kitesurf y la magia de la cultura Calima de 2000 anos.</p>
+      <p class="font-sans italic mb-3" style="color:#7ED321;font-size:18px;letter-spacing:0.5px">Explora el mundo</p>
+      <h1 class="font-sans font-black text-white tracking-tight" style="font-size:42px;line-height:0.95">VIAJES Y<br>AVENTURA CAMPAMENTO</h1>
+      <p class="text-white leading-relaxed mt-4" style="color:rgba(255,255,255,0.88);font-size:14px;max-width:480px;line-height:1.6">Bienvenido a Calima El Darien, corazon del Valle del Cauca. Lago Calima, el embalse mas grande de Colombia, vientos perfectos para kitesurf y la magia de la cultura Calima de 2000 anos.</p>
       <div class="flex items-center gap-5 mt-7">
-        <a href="tours.html" class="text-white px-6 py-3 rounded-[6px] font-bold text-xs tracking-widest shadow-lg" style="background:#7ED321">EMPEZAR AHORA</a>
+        <a href="tours.html" class="text-white px-7 py-3.5 rounded-md font-bold text-xs tracking-widest shadow-lg" style="background:#7ED321;letter-spacing:0.8px">EMPEZAR AHORA</a>
         <a href="#quienes" class="text-white text-xs font-bold tracking-widest flex items-center gap-2 hover:text-white/80">Quiénes somos <span class="w-2 h-2 rounded-full animate-pulse" style="background:#7ED321"></span></a>
-      </div>
-    </div>
-  </div>
-  <!-- Search bar original -->
-  <div class="relative z-20 max-w-[1320px] mx-auto px-4 w-full pb-6 lg:pb-0 lg:-mb-8 mt-auto lg:mt-0">
-    <div class="bg-[#2C343B]/95 backdrop-blur border border-white/10 rounded-[10px] shadow-2xl flex flex-col lg:flex-row items-stretch overflow-hidden">
-      <div class="grid grid-cols-2 lg:grid-cols-4 flex-1 divide-x divide-white/10 divide-y lg:divide-y-0">
-        <div class="px-6 py-4 flex gap-3 items-center">
-          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="flex-1">
-            <p class="text-white font-bold text-xs flex items-center gap-1">Destino <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
-            <p class="text-white/50 text-xs">Lago Calima, Darien</p>
-          </div>
-        </div>
-        <div class="px-6 py-4 flex gap-3 items-center">
-          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-solid fa-person-hiking"></i></div>
-          <div class="flex-1">
-            <p class="text-white font-bold text-xs flex items-center gap-1">Tipo <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
-            <p class="text-white/50 text-xs">Kitesurf • Cultural</p>
-          </div>
-        </div>
-        <div class="px-6 py-4 flex gap-3 items-center">
-          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-regular fa-clock"></i></div>
-          <div class="flex-1">
-            <p class="text-white font-bold text-xs flex items-center gap-1">Duración <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
-            <p class="text-white/50 text-xs">2-4 dias tour</p>
-          </div>
-        </div>
-        <div class="px-6 py-4 flex gap-3 items-center">
-          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-solid fa-users"></i></div>
-          <div class="flex-1">
-            <p class="text-white font-bold text-xs flex items-center gap-1">Huéspedes <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
-            <p class="text-white/50 text-xs">2 Huéspedes</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex items-center gap-3 px-3 py-3 bg-[#252E36] lg:bg-transparent">
-        <button class="hidden lg:flex w-9 h-9 rounded bg-white/10 items-center justify-center text-white/70 hover:bg-white/20 transition"><i class="fa-solid fa-sliders text-xs"></i></button>
-        <a href="tours.html" class="flex-1 lg:flex-none text-white w-full lg:w-12 h-12 rounded-[6px] flex items-center justify-center" style="background:#7ED321"><i class="fa-solid fa-magnifying-glass text-sm"></i><span class="lg:hidden ml-2 font-bold text-sm">Buscar</span></a>
       </div>
     </div>
   </div>

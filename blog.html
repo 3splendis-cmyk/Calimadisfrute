@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Calima Darién</title>
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/fontawesome.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+<nav class="bg-white shadow-sm sticky top-0 z-50"><div class="max-w-[1320px] mx-auto px-4 py-4 flex justify-between items-center"><a href="index.html" class="flex items-center gap-2"><div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-white font-black">V</div><span class="text-xl font-extrabold">Vitour<span class="text-primary">Calima</span></span></a><div class="hidden lg:flex gap-6 font-semibold text-sm"><a href="index.html">Inicio</a><a href="tours.html">Tours</a><a href="destinos.html">Destinos</a><a href="experiencias.html">Experiencias</a><a href="cultura.html">Cultura</a><a href="blog.html" class="text-primary">Blog</a><a href="contacto.html">Contacto</a></div><a href="index.html" class="bg-primary text-white btn-primary px-6 py-2 rounded-full font-bold text-sm">Volver al Inicio</a></div></nav>
+<div class="bg-secondary text-white py-12 text-center"><h1 class="text-4xl font-bold font-sans">Blog & Guías de Viaje</h1><p class="text-white/80 mt-2">Consejos locales para tu viaje al Valle &bull; <a href="cultura.html" class="underline text-[#BFDBFE]">Nueva: Zona Cultura Calima <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a></p></div>
+<!-- Destacado cultura -->
+<div class="max-w-[1320px] mx-auto px-4 pt-6"><a href="cultura.html" class="block bg-gradient-to-r from-[#0F2A5A] to-secondary text-white rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-4 hover:shadow-xl transition"><div><p class="text-xs tracking-widest text-[#BFDBFE] font-bold">DESTACADO CULTURA</p><h3 class="font-bold text-xl">ZONA CULTURA CALIMA – Museo, fotos, historia y petroglifos</h3><p class="text-sm text-white/80">400 piezas, 3 culturas, galería interactiva y tour guiado</p></div><span class="bg-primary px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap">Explorar ahora <i class='fa-solid fa-arrow-right text-xs ml-1'></i></span></a></div>
+<div class="max-w-[1320px] mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
+<article class="bg-white rounded-2xl overflow-hidden border card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/dest-rio.jpg" class="h-48 w-full object-cover"><div class="p-5"><p class="text-xs text-primary font-bold">02 Abr 2026</p><h3 class="font-bold mt-1">Las 8 mejores cosas que hacer en Calima</h3><p class="text-sm text-gray-600 mt-2">De kitesurf al atardecer en muelle. Guía con mapa.</p><a href="tours.html" class="text-primary text-sm font-bold mt-3 inline-block">Leer <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a></div></article>
+<article class="bg-white rounded-2xl overflow-hidden border card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hero1.jpg" class="h-48 w-full object-cover"><div class="p-5"><p class="text-xs text-primary font-bold">15 Mar 2026</p><h3 class="font-bold mt-1">Dónde hospedarse frente al Lago</h3><p class="text-sm text-gray-600 mt-2">Cabañas, glamping y hoteles con review real.</p><a href="destinos.html#lago" class="text-primary text-sm font-bold mt-3 inline-block">Leer <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a></div></article>
+<article class="bg-white rounded-2xl overflow-hidden border hover:shadow-lg transition ring-2 ring-primary"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" class="h-48 w-full object-cover"><div class="p-5"><p class="text-xs bg-primary text-white inline px-2 py-1 rounded">NUEVO</p><h3 class="font-bold mt-2">Cultura Calima: 2000 años de historia</h3><p class="text-sm text-gray-600 mt-2">Guía completa del Museo Calima con fotos y línea de tiempo Ilama-Yotoco-Sonso.</p><a href="cultura.html" class="bg-primary text-white btn-primary px-4 py-1.5 rounded-full text-sm font-bold mt-3 inline-block">Ver zona cultura <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a></div></article>
+</div>
+<footer class="bg-dark text-white btn-primary text-center py-6 text-sm">© 2026 VitourCalima</footer>
+<script>
+// reveal on scroll
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// also add reveal class to cards/sections automatically
+document.querySelectorAll('section, article, .card-hover').forEach(el=>{if(!el.classList.contains('reveal')){el.classList.add('reveal');obs.observe(el)}});
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

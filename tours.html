@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tours - Calima Darién</title>
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/fontawesome.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans bg-light">
+<nav class="bg-white shadow-sm sticky top-0 z-50"><div class="max-w-[1320px] mx-auto px-4 py-4 flex justify-between items-center"><a href="index.html" class="flex items-center gap-2"><div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-white font-black">V</div><span class="text-xl font-extrabold">Vitour<span class="text-primary">Calima</span></span></a><div class="hidden lg:flex gap-6 font-semibold text-sm"><a href="index.html">Inicio</a><a href="tours.html" class="text-primary">Tours</a><a href="destinos.html">Destinos</a><a href="experiencias.html">Experiencias</a><a href="cultura.html">Cultura</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a></div><a href="index.html" class="bg-primary text-white btn-primary px-6 py-2 rounded-full font-bold text-sm">Volver al Inicio</a></div></nav>
+
+<div class="bg-secondary text-white py-12 text-center">
+<h1 class="text-4xl font-bold font-sans">Tours en Calima El Darién</h1>
+<p class="text-white/80 mt-2">Elige tu aventura â€¢ <a href="index.html" class="underline">Inicio</a> / Tours</p>
+</div>
+
+<div class="max-w-[1320px] mx-auto px-4 py-10 grid lg:grid-cols-4 gap-6">
+<aside class="lg:col-span-1 bg-white p-6 rounded-2xl h-fit border">
+<h3 class="font-bold mb-4">Filtrar tours</h3>
+<p class="text-sm font-bold mt-4">Precio COP</p><input type="range" class="w-full accent-primary">
+<p class="text-sm font-bold mt-4">Duración</p><label class="flex gap-2 text-sm"><input type="checkbox"> Full Day</label><label class="flex gap-2 text-sm"><input type="checkbox" checked> 2-4 días</label>
+<p class="text-sm font-bold mt-4">Actividades</p><label class="flex gap-2 text-sm"><input type="checkbox" checked> Kitesurf</label><label class="flex gap-2 text-sm"><input type="checkbox"> Senderismo</label><label class="flex gap-2 text-sm"><input type="checkbox"> Cultural</label>
+<a href="contacto.html" class="block mt-6 bg-primary text-white text-center py-3 rounded-full font-bold">Solicitar Cotización</a>
+<div class="mt-6 p-4 bg-[#EFF6FF] rounded-xl text-sm"><strong>Tip local:</strong> El mejor viento para kitesurf es de julio a septiembre y diciembre a febrero. <a href="experiencias.html" class="text-primary underline">Ver calendario</a></div>
+</aside>
+
+<div class="lg:col-span-3 grid md:grid-cols-2 gap-6">
+<!-- 6 tours -->
+<div id="kitesurf" class="border rounded-2xl overflow-hidden bg-white card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-kitesurf.jpg" class="h-52 w-full object-cover"><div class="p-5"><span class="text-xs bg-primary text-white px-2 py-1 rounded">Más vendido</span><h3 class="font-bold text-lg mt-2">Kitesurf 3 días + Hospedaje Lago</h3><p class="text-sm text-gray-500 mt-1">Incluye equipo, instructor certificado IKO y hospedaje frente al lago. Ideal principiantes.</p><p class="mt-3 font-black text-primary">Desde $389.000 COP <span class="text-gray-400 line-through text-sm">$520.000</span></p><a href="contacto.html" class="mt-3 inline-block bg-dark text-white px-5 py-2 rounded-full text-sm font-bold">Reservar</a> <a href="destinos.html#lago" class="text-sm text-primary ml-2">Ver destino <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a></div></div>
+
+<div id="parapente" class="border rounded-2xl overflow-hidden bg-white card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-parapente.jpg" class="h-52 w-full object-cover"><div class="p-5"><span class="text-xs bg-secondary text-white px-2 py-1 rounded">Tendencia</span><h3 class="font-bold text-lg mt-2">Parapente sobre el Lago Calima</h3><p class="text-sm text-gray-500 mt-1">Vuelo biplaza 20 min + video 4K + transporte desde Darién.</p><p class="mt-3 font-black text-primary">Desde $280.000 COP</p><a href="contacto.html" class="mt-3 inline-block bg-dark text-white px-5 py-2 rounded-full text-sm font-bold">Reservar</a></div></div>
+
+<div id="museo" class="border rounded-2xl overflow-hidden bg-white card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" class="h-52 w-full object-cover"><div class="p-5"><span class="text-xs bg-primary text-white px-2 py-1 rounded">Cultural</span><h3 class="font-bold text-lg mt-2">Ruta Museo Calima + Centro Histórico</h3><p class="text-sm text-gray-500 mt-1">Tour guiado por el Museo Arqueológico Calima y calles coloniales. <a href="https://www.museocalima.com" target="_blank" class="underline text-primary">Más info</a></p><p class="mt-3 font-black text-primary">Desde $95.000 COP</p><a href="contacto.html" class="mt-3 inline-block bg-dark text-white px-5 py-2 rounded-full text-sm font-bold">Reservar</a></div></div>
+
+<div id="ecologico" class="border rounded-2xl overflow-hidden bg-white card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-rio.jpg" class="h-52 w-full object-cover"><div class="p-5"><span class="text-xs bg-green-600 text-white px-2 py-1 rounded">Eco</span><h3 class="font-bold text-lg mt-2">Reserva Río Bravo â€" Avistamiento</h3><p class="text-sm text-gray-500 mt-1">Senderismo 8km, avistamiento de aves endémicas y baño en cascada.</p><p class="mt-3 font-black text-primary">Desde $120.000 COP</p><a href="contacto.html" class="mt-3 inline-block bg-dark text-white px-5 py-2 rounded-full text-sm font-bold">Reservar</a></div></div>
+
+<div class="border rounded-2xl overflow-hidden bg-white card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hotel.jpg" class="h-52 w-full object-cover"><div class="p-5"><span class="text-xs bg-primary text-white px-2 py-1 rounded">Familiar</span><h3 class="font-bold text-lg mt-2">Cabaña Frente al Lago 2 noches</h3><p class="text-sm text-gray-500 mt-1">Cabaña para 4 personas, muelle privado, BBQ y kayak incluido.</p><p class="mt-3 font-black text-primary">Desde $650.000 COP</p><a href="contacto.html" class="mt-3 inline-block bg-dark text-white px-5 py-2 rounded-full text-sm font-bold">Reservar</a></div></div>
+
+<div class="border rounded-2xl overflow-hidden bg-white card-hover reveal"><img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hero1.jpg" class="h-52 w-full object-cover"><div class="p-5"><span class="text-xs bg-primary text-white px-2 py-1 rounded">Full Day</span><h3 class="font-bold text-lg mt-2">Tour Buga + Lago Calima</h3><p class="text-sm text-gray-500 mt-1">Basílica de Buga + almuerzo valluno + atardecer en el lago. <a href="destinos.html#buga" class="text-primary underline">Ver ruta</a></p><p class="mt-3 font-black text-primary">Desde $185.000 COP</p><a href="contacto.html" class="mt-3 inline-block bg-dark text-white px-5 py-2 rounded-full text-sm font-bold">Reservar</a></div></div>
+</div>
+</div>
+
+<footer class="bg-dark text-white btn-primary text-center py-6 text-sm">© 2026 VitourCalima â€¢ <a href="index.html" class="underline">Volver al inicio</a> â€¢ <a href="contacto.html" class="underline">Contacto</a></footer>
+<script>
+// reveal on scroll
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// also add reveal class to cards/sections automatically
+document.querySelectorAll('section, article, .card-hover').forEach(el=>{if(!el.classList.contains('reveal')){el.classList.add('reveal');obs.observe(el)}});
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitour Calima - Turismo en Calima El Darien, Valle del Cauca</title>
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/fontawesome.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans bg-[#F0F7FF] text-gray-800">
+
+<!-- Top Bar -->
+<div class="bg-secondary text-white text-sm py-2.5 px-4">
+  <div class="max-w-[1320px] mx-auto flex flex-wrap justify-between items-center gap-2">
+    <div class="flex items-center gap-6">
+      <span><i class="fa-regular fa-calendar mr-2"></i> Lunes a Domingo 8:00 - 18:00</span>
+      <span class="hidden md:inline"><i class="fa-regular fa-envelope mr-2"></i> info@calimadarien.travel</span>
+      <span class="hidden lg:inline"><i class="fa-solid fa-phone mr-2"></i> +57 318 555 0142</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contacto.html" class="bg-primary px-5 py-1.5 rounded-full font-bold btn-primary">Reserva Ahora</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-[1320px] mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2">
+      <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-white font-black text-xl">V</div>
+      <span class="text-2xl font-extrabold tracking-tight text-dark">Vitour<span class="text-primary">Calima</span></span>
+      <span class="hidden md:inline text-xs bg-secondary text-white px-2 py-1 rounded ml-1">Darien</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-7 font-semibold text-[15px] text-dark">
+      <a href="index.html" class="nav-link active text-primary">Inicio</a>
+      <a href="tours.html" class="nav-link hover:text-primary">Tours</a>
+      <a href="destinos.html" class="nav-link hover:text-primary">Destinos</a>
+      <a href="experiencias.html" class="nav-link hover:text-primary">Experiencias</a>
+      <a href="cultura.html" class="nav-link hover:text-primary">Cultura</a>
+      <a href="blog.html" class="nav-link hover:text-primary">Blog</a>
+      <a href="contacto.html" class="nav-link hover:text-primary">Contacto</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-2 text-sm">
+        <img src="img/flags/co.png" class="w-5 rounded" alt="CO"> ES <i class="fa-solid fa-chevron-down text-xs"></i>
+        <span class="ml-2">COP</span>
+      </div>
+      <a href="contacto.html" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-regular fa-user"></i></a>
+      <button id="mobileBtn" class="lg:hidden w-10 h-10 bg-secondary text-white rounded-lg"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t bg-white px-4 py-4 space-y-3">
+    <a href="index.html" class="block font-bold text-primary">Inicio</a>
+    <a href="tours.html" class="block">Tours</a>
+    <a href="destinos.html" class="block">Destinos</a>
+    <a href="experiencias.html" class="block">Experiencias</a>
+    <a href="cultura.html" class="block">Cultura</a>
+    <a href="blog.html" class="block">Blog</a>
+    <a href="contacto.html" class="block">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO original Vitour - como al principio -->
+<section class="relative overflow-hidden bg-[#0B1C33] min-h-[640px] flex flex-col">
+  <div class="absolute inset-0 flex">
+    <div class="w-[48%] bg-[#0B1C33] hidden lg:block"></div>
+    <div class="flex-1 relative">
+      <img id="heroBg" src="img/hero1.jpg" alt="Calima Darien" class="w-full h-full object-cover object-center" style="transition:opacity .4s">
+      <div class="absolute inset-0 bg-[#0B1C33]/65 lg:hidden"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1C33] via-transparent to-transparent lg:via-[#0B1C33]/20 hidden lg:block"></div>
+      <img src="img/hiker.jpg" alt="Hiker" class="hidden lg:block absolute right-[12%] bottom-0 h-[92%] w-auto object-contain drop-shadow-2xl" style="mask-image: linear-gradient(to bottom, black 85%, transparent);">
+      <div class="hidden lg:block absolute top-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur border border-white/20 border-dashed px-4 py-2 rounded">
+        <span class="font-sans italic text-lg flex items-center gap-2" style="color:#7ED321">Booking</span>
+        <div class="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2" style="border-color:#7ED321"></div>
+        <div class="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2" style="border-color:#7ED321"></div>
+        <div class="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2" style="border-color:#7ED321"></div>
+        <div class="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2" style="border-color:#7ED321"></div>
+      </div>
+      <div class="hidden lg:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col gap-3">
+        <button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white hover:text-[#0B1C33] transition"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+        <button class="w-6 h-6 rounded-full bg-white/10 backdrop-blur flex items-center justify-center text-white/70 -ml-6"><i class="fa-solid fa-chevron-left text-[10px]"></i></button>
+        <button id="heroNext" class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-[#0B1C33] shadow-xl hover:scale-105 transition mt-2"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="absolute inset-0 hidden lg:block pointer-events-none">
+    <svg class="absolute left-[48%] top-0 h-full w-[120px]" viewBox="0 0 120 640" preserveAspectRatio="none"><path d="M0 0 L60 0 L120 640 L0 640 Z" fill="#0B1C33"/></svg>
+  </div>
+  <div class="relative z-10 flex-1 flex items-center max-w-[1320px] mx-auto px-4 md:px-8 w-full py-12 lg:py-0">
+    <div class="w-full lg:w-[520px] pt-6 lg:pt-0">
+      <p class="font-sans italic text-lg mb-2" style="color:#7ED321">Explora el mundo</p>
+      <h1 class="font-sans font-black text-white leading-[0.95] text-[42px] md:text-[52px] tracking-tight">VIAJES Y<br>AVENTURA CAMPAMENTO</h1>
+      <p class="text-white/60 text-[13px] leading-relaxed mt-4 max-w-[440px]">Bienvenido a Calima El Darien, corazon del Valle del Cauca. Lago Calima, el embalse mas grande de Colombia, vientos perfectos para kitesurf y la magia de la cultura Calima de 2000 anos.</p>
+      <div class="flex items-center gap-5 mt-7">
+        <a href="tours.html" class="text-white px-6 py-3 rounded-[6px] font-bold text-xs tracking-widest shadow-lg" style="background:#7ED321">EMPEZAR AHORA</a>
+        <a href="#quienes" class="text-white text-xs font-bold tracking-widest flex items-center gap-2 hover:text-white/80">Quiénes somos <span class="w-2 h-2 rounded-full animate-pulse" style="background:#7ED321"></span></a>
+      </div>
+    </div>
+  </div>
+  <!-- Search bar original -->
+  <div class="relative z-20 max-w-[1320px] mx-auto px-4 w-full pb-6 lg:pb-0 lg:-mb-8 mt-auto lg:mt-0">
+    <div class="bg-[#2C343B]/95 backdrop-blur border border-white/10 rounded-[10px] shadow-2xl flex flex-col lg:flex-row items-stretch overflow-hidden">
+      <div class="grid grid-cols-2 lg:grid-cols-4 flex-1 divide-x divide-white/10 divide-y lg:divide-y-0">
+        <div class="px-6 py-4 flex gap-3 items-center">
+          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="flex-1">
+            <p class="text-white font-bold text-xs flex items-center gap-1">Destino <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
+            <p class="text-white/50 text-xs">Lago Calima, Darien</p>
+          </div>
+        </div>
+        <div class="px-6 py-4 flex gap-3 items-center">
+          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-solid fa-person-hiking"></i></div>
+          <div class="flex-1">
+            <p class="text-white font-bold text-xs flex items-center gap-1">Tipo <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
+            <p class="text-white/50 text-xs">Kitesurf • Cultural</p>
+          </div>
+        </div>
+        <div class="px-6 py-4 flex gap-3 items-center">
+          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-regular fa-clock"></i></div>
+          <div class="flex-1">
+            <p class="text-white font-bold text-xs flex items-center gap-1">Duración <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
+            <p class="text-white/50 text-xs">2-4 dias tour</p>
+          </div>
+        </div>
+        <div class="px-6 py-4 flex gap-3 items-center">
+          <div class="w-8 h-8 rounded flex items-center justify-center text-xs" style="background:rgba(126,211,33,0.2);color:#7ED321"><i class="fa-solid fa-users"></i></div>
+          <div class="flex-1">
+            <p class="text-white font-bold text-xs flex items-center gap-1">Huéspedes <i class="fa-solid fa-chevron-down text-[8px] text-white/40"></i></p>
+            <p class="text-white/50 text-xs">2 Huéspedes</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 px-3 py-3 bg-[#252E36] lg:bg-transparent">
+        <button class="hidden lg:flex w-9 h-9 rounded bg-white/10 items-center justify-center text-white/70 hover:bg-white/20 transition"><i class="fa-solid fa-sliders text-xs"></i></button>
+        <a href="tours.html" class="flex-1 lg:flex-none text-white w-full lg:w-12 h-12 rounded-[6px] flex items-center justify-center" style="background:#7ED321"><i class="fa-solid fa-magnifying-glass text-sm"></i><span class="lg:hidden ml-2 font-bold text-sm">Buscar</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR minimal -->
+<section class="reveal bg-white border-y border-gray-100 py-5">
+  <div class="max-w-[1320px] mx-auto px-4 flex flex-wrap justify-between items-center gap-6">
+    <div class="flex items-center gap-6">
+      <div class="flex -space-x-2">
+        <img src="img/avatars/av7.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+        <img src="img/avatars/av9.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+        <img src="img/avatars/av11.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold border-2 border-white">+2k</div>
+      </div>
+      <div class="text-sm">
+        <p class="font-bold text-secondary">2.500+ viajeros felices</p>
+        <p class="text-gray-500 text-xs"><i class="fa-solid fa-star text-amber-400"></i> 4.9/5 en Google</p>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-2 text-sm text-gray-500"><span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-primary"></i> Pago seguro</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="quienes" class="reveal max-w-[1320px] mx-auto px-4 py-20 grid lg:grid-cols-2 gap-12 items-center">
+  <div class="relative">
+    <img src="img/about.jpg" alt="Calima Darien" class="rounded-2xl w-full h-[520px] object-cover">
+    <div class="absolute -bottom-6 -right-6 bg-secondary text-white rounded-2xl p-6 w-64 hidden md:block">
+      <p class="text-4xl font-black">15+</p>
+      <p class="text-sm">Anos promoviendo el turismo en el Valle del Cauca</p>
+    </div>
+  </div>
+  <div>
+    <span class="text-primary font-bold tracking-widest text-sm">EXPLORA EL MUNDO</span>
+    <h2 class="font-sans text-4xl font-bold text-dark leading-tight mt-2 mb-4">Gran oportunidad para<br>aventura & viajes en <span class="text-primary">Calima</span></h2>
+    <p class="text-gray-600 mb-6">Calima El Darien es el municipio del Lago Calima, el embalse mas grande de Colombia y uno de los mejores del mundo para deportes de viento.</p>
+    <div class="grid sm:grid-cols-2 gap-5 mb-8">
+      <div class="flex gap-3">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-xl"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div><h4 class="font-bold">Guia local certificado</h4><p class="text-sm text-gray-500">Guias oriundos de Darien</p></div>
+      </div>
+      <div class="flex gap-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent text-xl"><i class="fa-solid fa-route"></i></div>
+        <div><h4 class="font-bold">Viajes personalizados</h4><p class="text-sm text-gray-500">Arma tu ruta: lago, montana y cultura.</p></div>
+      </div>
+    </div>
+    <a href="experiencias.html" class="inline-block bg-dark text-white px-7 py-3 rounded-full font-bold">Mas sobre nosotros</a>
+  </div>
+</section>
+
+<!-- FEATURED TOURS -->
+<section class="reveal bg-white py-20">
+  <div class="max-w-[1320px] mx-auto px-4">
+    <div class="text-center mb-8">
+      <span class="text-primary font-bold tracking-widest text-sm">EXPLORA EL MUNDO</span>
+      <h2 class="font-sans text-4xl font-bold mt-2">Paquetes turisticos destacados</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="tours.html#kitesurf" class="group bg-white border rounded-2xl overflow-hidden card-hover reveal shimmer">
+        <div class="relative">
+          <img src="img/tour-kitesurf.jpg" alt="Kitesurf" class="h-48 w-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Destacado</span>
+          <span class="absolute bottom-3 left-3 bg-secondary text-white text-xs px-2 py-1 rounded">Más vendido</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-gray-500"><i class="fa-solid fa-location-dot text-primary"></i> Lago Calima, Darien</p>
+          <h3 class="font-bold leading-tight mt-1">Kitesurf en Lago Calima – Curso 3 dias + Hospedaje</h3>
+          <p class="text-xs text-gray-500 mt-1">4.8 (127 Reseñas) &bull; 3 dias &bull; 6 personas</p>
+          <p class="mt-3"><span class="text-gray-400 line-through text-sm">$520.000</span> <span class="font-black text-primary"> Desde $389.000 COP</span></p>
+        </div>
+      </a>
+      <a href="tours.html#parapente" class="group bg-white border rounded-2xl overflow-hidden card-hover reveal shimmer">
+        <div class="relative">
+          <img src="img/tour-parapente.jpg" alt="Parapente" class="h-48 w-full object-cover group-hover:scale-105 transition">
+          <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Destacado</span>
+          <span class="absolute bottom-3 left-3 bg-accent text-white text-xs px-2 py-1 rounded">Tendencia</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-gray-500"><i class="fa-solid fa-location-dot text-primary"></i> Mirador de Darien</p>
+          <h3 class="font-bold leading-tight mt-1">Parapente sobre el Lago + Video 4K</h3>
+          <p class="text-xs text-gray-500 mt-1">4.9 (89 Reseñas) &bull; 5 horas &bull; 2 personas</p>
+          <p class="mt-3 font-black text-primary"> Desde $280.000 COP</p>
+        </div>
+      </a>
+      <a href="tours.html#museo" class="group bg-white border rounded-2xl overflow-hidden card-hover reveal shimmer">
+        <div class="relative">
+          <img src="img/tour-museo.jpg" alt="Museo Calima" class="h-48 w-full object-cover group-hover:scale-105 transition">
+          <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Destacado</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-gray-500"><i class="fa-solid fa-location-dot text-primary"></i> Centro, Calima Darien</p>
+          <h3 class="font-bold leading-tight mt-1">Ruta Cultural Calima + Museo Arqueologico</h3>
+          <p class="text-xs text-gray-500 mt-1">4.7 (64 Reseñas) &bull; 1 dia &bull; 12 personas</p>
+          <p class="mt-3 font-black text-primary"> Desde $95.000 COP</p>
+        </div>
+      </a>
+      <a href="tours.html#ecologico" class="group bg-white border rounded-2xl overflow-hidden card-hover reveal shimmer">
+        <div class="relative">
+          <img src="img/tour-rio.jpg" alt="Rio Bravo" class="h-48 w-full object-cover group-hover:scale-105 transition">
+          <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Destacado</span>
+          <span class="absolute bottom-3 left-3 bg-secondary text-white text-xs px-2 py-1 rounded">Eco</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-gray-500"><i class="fa-solid fa-location-dot text-primary"></i> Reserva Rio Bravo</p>
+          <h3 class="font-bold leading-tight mt-1">Senderismo Rio Bravo & Avistamiento de Aves</h3>
+          <p class="text-xs text-gray-500 mt-1">4.9 (152 Reseñas) &bull; 1 dia &bull; 10 personas</p>
+          <p class="mt-3 font-black text-primary"> Desde $120.000 COP</p>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mt-8">
+      <a href="tours.html" class="inline-block border-2 border-dark text-dark px-8 py-3 rounded-full font-bold hover:bg-dark hover:text-white transition">Ver todos los tours</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ACTIVITIES -->
+<section class="reveal max-w-[1320px] mx-auto px-4 py-20 grid lg:grid-cols-2 gap-12 items-center">
+  <div>
+    <span class="text-primary font-bold tracking-widest text-sm">ACTIVIDADES</span>
+    <h2 class="font-sans text-4xl font-bold mt-2 mb-6">Aventura real y disfruta tus<br>sueños en Calima</h2>
+    <div class="space-y-4" id="activities">
+      <button class="w-full text-left bg-secondary text-white p-5 rounded-xl flex justify-between items-center activity-btn" data-img="img/tour-kitesurf.jpg">
+        <span><i class="fa-solid fa-water mr-3"></i> Kitesurf & Windsurf en Lago Calima</span><i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="w-full text-left bg-gray-100 p-5 rounded-xl flex justify-between items-center hover:bg-white border activity-btn" data-img="img/tour-parapente.jpg">
+        <span><i class="fa-solid fa-parachute-box mr-3"></i> Parapente & Miradores</span><i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="w-full text-left bg-gray-100 p-5 rounded-xl flex justify-between items-center hover:bg-white border activity-btn" data-img="img/tour-rio.jpg">
+        <span><i class="fa-solid fa-person-hiking mr-3"></i> Senderismo & Cascadas</span><i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="w-full text-left bg-gray-100 p-5 rounded-xl flex justify-between items-center hover:bg-white border activity-btn" data-img="img/beach.jpg">
+        <span><i class="fa-solid fa-fish mr-3"></i> Pesca & Paseo en Lancha</span><i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="w-full text-left bg-gray-100 p-5 rounded-xl flex justify-between items-center hover:bg-white border activity-btn" data-img="img/hotel.jpg">
+        <span><i class="fa-solid fa-campground mr-3"></i> Camping & Cabañas frente al lago</span><i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <a href="experiencias.html" class="inline-block mt-8 bg-primary text-white px-8 py-3.5 rounded-full font-bold">Explorar actividades</a>
+  </div>
+  <div class="relative">
+    <img id="activityImg" src="img/tour-kitesurf.jpg" alt="Actividad" class="rounded-2xl w-full h-[580px] object-cover">
+    <div class="absolute bottom-6 left-6 bg-white rounded-xl p-4 shadow-xl flex items-center gap-3">
+      <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-check"></i></div>
+      <div>
+        <p class="font-bold text-sm">Viaje seguro & cómodo</p>
+        <p class="text-xs text-gray-500">Operadores certificados Valle del Cauca</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="reveal max-w-[1320px] mx-auto px-4">
+  <div class="bg-gradient-to-br from-secondary to-secondaryLight rounded-3xl overflow-hidden grid lg:grid-cols-2 items-center">
+    <img src="img/hotel.jpg" alt="Promo" class="h-[420px] w-full object-cover">
+    <div class="p-10 md:p-14 text-white">
+      <span class="text-[#BFDBFE] font-bold tracking-widest text-sm">EXPLORA EL MUNDO</span>
+      <h2 class="font-sans text-4xl font-bold mt-2 mb-3">Descubre grandes descuentos<br>alrededor del Lago Calima</h2>
+      <p class="text-white/80 mb-6">Reserva 25% OFF en cabañas y tours este mes. Válido para fines de semana y festivos.</p>
+      <div class="flex gap-3 mb-8 text-center">
+        <div class="bg-white text-dark rounded-xl px-5 py-3"><p class="font-black text-xl">02</p><p class="text-xs">días</p></div>
+        <div class="bg-white text-dark rounded-xl px-5 py-3"><p class="font-black text-xl">23</p><p class="text-xs">horas</p></div>
+        <div class="bg-white text-dark rounded-xl px-5 py-3"><p class="font-black text-xl">59</p><p class="text-xs">min</p></div>
+        <div class="bg-white text-dark rounded-xl px-5 py-3"><p class="font-black text-xl">59</p><p class="text-xs">seg</p></div>
+      </div>
+      <a href="tours.html" class="inline-block bg-primary text-white px-8 py-3.5 rounded-full font-bold">Explorar más</a>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="reveal py-14 bg-white mt-10">
+  <div class="max-w-[1320px] mx-auto px-4">
+    <div class="flex flex-wrap justify-between items-end mb-8 gap-4">
+      <div>
+        <span class="text-primary font-bold tracking-widest text-sm">EXPLORA EL MUNDO</span>
+        <h2 class="font-sans text-4xl font-bold mt-2">Destinos top del Valle</h2>
+      </div>
+      <a href="destinos.html" class="text-primary font-bold">Ver todos <i class="fa-solid fa-arrow-right ml-1"></i></a>
+    </div>
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <a href="destinos.html#lago" class="relative rounded-2xl overflow-hidden h-64 group card-hover reveal">
+        <img src="img/dest-lago.jpg" alt="Lago" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white"><p class="text-xs bg-white/20 inline px-2 py-1 rounded">12 tours</p><p class="font-bold">Lago Calima</p></div>
+      </a>
+      <a href="destinos.html#darien" class="relative rounded-2xl overflow-hidden h-64 group card-hover reveal">
+        <img src="img/dest-darien.jpg" alt="Darien" class="w-full h-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white"><p class="text-xs bg-white/20 inline px-2 py-1 rounded">7 tours</p><p class="font-bold">Darien Pueblo</p></div>
+      </a>
+      <a href="destinos.html#rio-bravo" class="relative rounded-2xl overflow-hidden h-64 group card-hover reveal">
+        <img src="img/dest-rio.jpg" alt="Rio Bravo" class="w-full h-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white"><p class="text-xs bg-white/20 inline px-2 py-1 rounded">9 tours</p><p class="font-bold">Rio Bravo</p></div>
+      </a>
+      <a href="destinos.html#buga" class="relative rounded-2xl overflow-hidden h-64 group card-hover reveal">
+        <img src="img/dest-buga.jpg" alt="Buga" class="w-full h-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white"><p class="text-xs bg-white/20 inline px-2 py-1 rounded">5 tours</p><p class="font-bold">Buga + Calima</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURA -->
+<section id="cultura-home" class="reveal bg-[#0F2A5A] py-20">
+  <div class="max-w-[1320px] mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div class="text-white">
+        <span class="text-[#BFDBFE] font-bold tracking-widest text-sm"><i class="fa-solid fa-landmark mr-2"></i> CULTURA CALIMA &bull; 2000 ANOS DE HISTORIA</span>
+        <h2 class="font-sans text-4xl font-bold mt-2 leading-tight">Descubre la historia<br>que guarda el <span class="text-[#BFDBFE]">Museo Calima</span></h2>
+        <p class="text-white/80 mt-4">Tres culturas precolombinas (Ilama, Yotoco y Sonso) habitaron este valle. Oro, ceramica y petroglifos que hoy puedes ver en el Museo Arqueologico Calima.</p>
+        <div class="grid grid-cols-3 gap-3 mt-6 text-center">
+          <div class="bg-white/10 rounded-xl p-3"><p class="font-black text-xl text-[#BFDBFE]">Ilama</p><p class="text-xs">1600-200 a.C.</p></div>
+          <div class="bg-primary rounded-xl p-3"><p class="font-black text-xl">Yotoco</p><p class="text-xs">200aC-1200dC</p></div>
+          <div class="bg-white/10 rounded-xl p-3"><p class="font-black text-xl text-[#BFDBFE]">Sonso</p><p class="text-xs">1200-1500 d.C.</p></div>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a href="cultura.html" class="bg-primary text-white px-7 py-3 rounded-full font-bold btn-primary">Explorar cultura <i class="fa-solid fa-arrow-right ml-2"></i></a>
+          <a href="cultura.html#museo" class="bg-white text-dark px-7 py-3 rounded-full font-bold">Ver museo</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <a href="cultura.html" class="block relative rounded-2xl overflow-hidden h-56 group"><img src="img/tour-museo.jpg" alt="Museo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Museo Calima</p><p class="text-xs">400+ piezas</p></div></a>
+          <a href="cultura.html#petroglifos" class="block relative rounded-2xl overflow-hidden h-40 group"><img src="img/dest-rio.jpg" alt="Petroglifos" class="w-full h-full object-cover group-hover:scale-110 transition"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Petroglifos</p><p class="text-xs">Rio Bravo</p></div></a>
+        </div>
+        <div class="space-y-4 mt-6">
+          <a href="cultura.html" class="block relative rounded-2xl overflow-hidden h-40 group"><img src="img/cultura-yotoco.jpg" alt="Oro" class="w-full h-full object-cover group-hover:scale-110 transition"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Oro Yotoco</p><p class="text-xs">Poporos</p></div></a>
+          <a href="cultura.html" class="block relative rounded-2xl overflow-hidden h-56 group"><img src="img/tour-rio.jpg" alt="Ceramica" class="w-full h-full object-cover group-hover:scale-110 transition"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Ceramica Ilama</p><p class="text-xs">Antropomorfa</p></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="reveal max-w-[1320px] mx-auto px-4 py-20">
+  <div class="text-center mb-8">
+    <span class="text-primary font-bold tracking-widest text-sm">EXPLORA EL MUNDO</span>
+    <h2 class="font-sans text-3xl font-bold mt-2">Ultimas noticias & articulos</h2>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <a href="blog.html" class="border rounded-2xl overflow-hidden card-hover reveal bg-white">
+      <img src="img/dest-rio.jpg" alt="Blog 1" class="h-48 w-full object-cover">
+      <div class="p-5">
+        <p class="text-xs text-primary font-bold">02 Abr 2026 &bull; 03 Comentarios</p>
+        <h3 class="font-bold mt-1">Las 8 mejores cosas que hacer en Calima</h3>
+        <p class="text-sm text-gray-500 mt-2">Desde kitesurf hasta la ruta del cafe valluno...</p>
+        <span class="text-primary font-bold text-sm mt-3 inline-block">Leer mas <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+      </div>
+    </a>
+    <a href="blog.html" class="border rounded-2xl overflow-hidden card-hover reveal bg-white">
+      <img src="img/dest-buga.jpg" alt="Blog 2" class="h-48 w-full object-cover">
+      <div class="p-5">
+        <p class="text-xs text-primary font-bold">15 Mar 2026 &bull; 05 Comentarios</p>
+        <h3 class="font-bold mt-1">Guia completa del Lago Calima</h3>
+        <p class="text-sm text-gray-500 mt-2">Todo lo que necesitas para tu viaje perfecto...</p>
+        <span class="text-primary font-bold text-sm mt-3 inline-block">Leer mas <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+      </div>
+    </a>
+  
+    <a href="blog.html" class="border rounded-2xl overflow-hidden card-hover reveal bg-white">
+      <img src="img/tour-rio.jpg" alt="Blog 3" class="h-48 w-full object-cover">
+      <div class="p-5">
+        <p class="text-xs text-primary font-bold">28 Feb 2026 &bull; 02 Comentarios</p>
+        <h3 class="font-bold mt-1">Cultura Calima: el legado precolombino del Valle</h3>
+        <p class="text-sm text-gray-500 mt-2">Visita el Museo Calima y descubre 2000 años...</p>
+        <span class="text-primary font-bold text-sm mt-3 inline-block">Leer más <i class="fa-solid fa-arrow-right text-xs ml-1"></i></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="reveal bg-[#EFF6FF] py-8">
+  <div class="max-w-[1320px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-4">
+      <img src="img/dest-rio.jpg" alt="CTA" class="w-16 h-16 rounded-xl object-cover">
+      <div>
+        <h3 class="font-bold text-xl">¿Listo para la aventura en Calima?</h3>
+        <p class="text-sm text-gray-600">Contactoanos en @calimadarien.travel</p>
+      </div>
+    </div>
+    <a href="contacto.html" class="bg-dark text-white px-8 py-3 rounded-full font-bold">Reserva ahora</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-12">
+  <div class="max-w-[1320px] mx-auto px-4 grid md:grid-cols-3 gap-8 pb-8">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-black">V</div>
+        <span class="text-xl font-bold">VitourCalima</span>
+      </div>
+      <p class="text-sm text-white/70">El portal turistico oficial de Calima El Darien, Valle del Cauca.</p>
+      <p class="text-sm mt-4"><i class="fa-regular fa-envelope mr-2 text-primary"></i> info@calimadarien.travel</p>
+      <p class="text-sm"><i class="fa-solid fa-phone mr-2 text-primary"></i> +57 318 555 0142</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4">Servicios</h4>
+      <ul class="space-y-2 text-sm text-white/70">
+        <li><a href="tours.html" class="hover:text-white">Tours Lago Calima</a></li>
+        <li><a href="experiencias.html" class="hover:text-white">Kitesurf & Parapente</a></li>
+        <li><a href="destinos.html" class="hover:text-white">Hospedaje & Cabanas</a></li>
+        <li><a href="blog.html" class="hover:text-white">Blog & Guias</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4">Contacto</h4>
+      <p class="text-sm text-white/70">Carrera 6 # 8-25, Darien</p>
+      <p class="text-sm text-white/70 mt-2">info@calimadarien.travel</p>
+      <a href="contacto.html" class="inline-block mt-4 bg-white text-secondary px-5 py-2 rounded-full font-bold text-sm">Contactoanos</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-4 text-center text-sm text-white/60">
+    Copyright © 2026 VitourCalima
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

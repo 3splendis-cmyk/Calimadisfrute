@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultura Calima - Historia, Museo y Patrimonio | VitourCalima</title>
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/fontawesome.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero-slide { background-size: cover; background-position: center; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+html{scroll-behavior:smooth}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes pulseSoft{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.reveal{opacity:0;transform:translateY(20px);transition:all .7s cubic-bezier(.22,1,.36,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+.card-hover{transition:all .35s cubic-bezier(.22,1,.36,1)}
+.card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,42,90,.15)}
+.btn-primary{transition:all .25s;position:relative;overflow:hidden}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,99,235,.35)}
+.btn-primary:active{transform:translateY(0)}
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#2563EB;transition:width .3s}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.glass{backdrop-filter:blur(12px);background:rgba(255,255,255,.85)}
+.shimmer{position:relative;overflow:hidden}
+.shimmer::after{content:'';position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:transform .6s}
+.shimmer:hover::after{transform:translateX(100%)}
+</style>
+</head>
+<body class="bg-light text-gray-800 font-sans">
+
+<nav class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-[1320px] mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2"><div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-white font-black text-xl">V</div><span class="text-2xl font-extrabold tracking-tight text-dark">Vitour<span class="text-primary">Calima</span></span><span class="hidden md:inline text-xs bg-secondary text-white px-2 py-1 rounded ml-1">Cultura</span></a>
+    <div class="hidden lg:flex items-center gap-6 font-semibold text-[15px] text-dark">
+      <a href="index.html" class="hover:text-primary">Inicio</a>
+      <a href="tours.html" class="hover:text-primary">Tours</a>
+      <a href="destinos.html" class="hover:text-primary">Destinos</a>
+      <a href="experiencias.html" class="hover:text-primary">Experiencias</a>
+      <a href="cultura.html" class="text-primary border-b-2 border-primary pb-1">Cultura</a>
+      <a href="blog.html" class="hover:text-primary">Blog</a>
+      <a href="contacto.html" class="hover:text-primary">Contacto</a>
+    </div>
+    <a href="tours.html#museo" class="hidden md:inline bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-primaryHover transition">Tour Cultural $95k</a>
+    <button id="mobBtn" class="lg:hidden w-10 h-10 bg-secondary text-white rounded-lg"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobMenu" class="hidden lg:hidden border-t bg-white px-4 py-3 space-y-2">
+    <a href="index.html" class="block">Inicio</a><a href="cultura.html" class="block text-primary font-bold">Cultura</a><a href="tours.html" class="block">Tours</a><a href="contacto.html" class="block">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO CULTURA -->
+<section class="reveal relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondaryLight/70 to-transparent z-10"></div>
+  <div class="min-h-[560px] bg-cover bg-center" style="background-image:url('img/tour-museo.jpg');"></div>
+  <div class="absolute inset-0 z-20 flex items-center">
+    <div class="max-w-[1320px] mx-auto px-4 w-full grid lg:grid-cols-2 gap-8">
+      <div class="text-white">
+        <span class="inline-block bg-white/15 backdrop-blur border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] mb-4"><i class="fa-solid fa-landmark mr-2 text-[#BFDBFE]"></i> PATRIMONIO PRECOLOMBINO &bull; 2000 AÑOS</span>
+        <h1 class="font-sans text-5xl md:text-6xl font-extrabold leading-[0.95] mb-4">Cultura<br><span class="text-[#BFDBFE]">Calima</span><br>El Alma de Darién</h1>
+        <p class="text-white/90 text-lg max-w-xl mb-6">Tres culturas, un mismo territorio: <strong>Ilama (1600-200 a.C.)</strong>, <strong>Yotoco (200 a.C.-1200 d.C.)</strong> y <strong>Sonso (1200-1500 d.C.)</strong>. Descubre orfebrería, cerámica y el famoso Museo Arqueológico Calima.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#museo" class="bg-primary text-white px-7 py-3.5 rounded-full font-bold hover:bg-primaryHover transition"><i class="fa-solid fa-building-columns mr-2"></i> Visitar Museo</a>
+          <a href="#linea-tiempo" class="bg-white text-dark px-7 py-3.5 rounded-full font-bold btn-primary">Ver historia</a>
+        </div>
+        <div class="flex items-center gap-4 mt-7 text-sm">
+          <span><i class="fa-solid fa-location-dot text-[#BFDBFE] mr-1"></i> Museo Calima, Carrera 4 # 6-20, Darién</span>
+          <span class="hidden md:inline">&bull;</span>
+          <span><i class="fa-regular fa-clock mr-1"></i> Lun-Dom 8am-5pm</span>
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        <a href="https://www.youtube.com/watch?v=ufjVkq1KGsM" target="_blank" rel="noopener" class="block bg-white rounded-2xl p-4 w-[360px] ml-auto shadow-2xl hover:shadow-xl hover:-translate-y-1 transition group cursor-pointer">
+          <div class="relative rounded-xl overflow-hidden h-56">
+            <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" alt="Pieza Calima" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                <i class="fa-solid fa-play text-primary text-xl ml-1"></i>
+              </div>
+            </div>
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1"><i class="fa-brands fa-youtube"></i> YouTube</span>
+          </div>
+          <p class="text-xs tracking-widest text-primary font-bold mt-3">PIEZA DESTACADA • VIDEO</p>
+          <h3 class="font-bold group-hover:text-primary transition">Poporo Quimbaya estilo Calima</h3>
+          <p class="text-sm text-gray-500">Cerámica Yotoco &bull; 400 d.C. &bull; Museo Calima</p>
+          <div class="flex gap-2 mt-3"><span class="text-xs bg-secondary text-white px-2 py-1 rounded">Oro</span><span class="text-xs bg-primary text-white px-2 py-1 rounded">Cerámica</span><span class="text-xs border px-2 py-1 rounded">1200 años</span></div>
+          <p class="text-xs text-primary font-bold mt-3 flex items-center gap-1">Ver video en YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="reveal max-w-[1320px] mx-auto px-4 -mt-8 relative z-30">
+  <div class="bg-white rounded-2xl shadow-xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div><p class="text-3xl font-black text-primary">2000+</p><p class="text-xs font-bold tracking-widest text-gray-500">AÑOS DE HISTORIA</p></div>
+    <div><p class="text-3xl font-black text-secondary">3</p><p class="text-xs font-bold tracking-widest text-gray-500">CULTURAS (ILAMA-YOTOCO-SONSO)</p></div>
+    <div><p class="text-3xl font-black text-primary">400+</p><p class="text-xs font-bold tracking-widest text-gray-500">PIEZAS EN MUSEO</p></div>
+    <div><p class="text-3xl font-black text-secondary">1</p><p class="text-xs font-bold tracking-widest text-gray-500">MUSEO ARQUEOLÓGICO</p></div>
+  </div>
+</section>
+
+<!-- LINEA DE TIEMPO -->
+<section id="linea-tiempo" class="reveal max-w-[1320px] mx-auto px-4 py-14">
+  <div class="text-center mb-10">
+    <span class="text-primary font-bold tracking-widest text-sm">LÍNEA DEL TIEMPO</span>
+    <h2 class="font-sans text-4xl font-bold mt-2">Tres culturas que habitaron el Valle</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mt-3">La cultura Calima no es una sola, son tres periodos que dejaron orfebrería, tumbas y cerámica únicas en América.</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white border rounded-2xl overflow-hidden card-hover reveal reveal">
+      <div class="h-2 bg-[#1E40AF]"></div>
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-rio.jpg" alt="Ilama" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <span class="text-xs bg-[#1E40AF] text-white px-3 py-1 rounded-full font-bold">1600 - 200 a.C.</span>
+        <h3 class="font-sans text-xl font-bold mt-3">Cultura Ilama</h3>
+        <p class="text-sm text-gray-600 mt-2">La más antigua. Cerámica funeraria, rostros antropomorfos y tumbas de pozo. Vivían en aldeas alrededor de la laguna.</p>
+        <ul class="text-xs text-gray-500 mt-3 space-y-1"><li><i class="fa-solid fa-check text-primary mr-1"></i> Cerámica café y negra incisa</li><li><i class="fa-solid fa-check text-primary mr-1"></i> Aldeas palafíticas</li></ul>
+        <a href="https://es.wikipedia.org/wiki/Cultura_calima" target="_blank" class="text-primary font-bold text-sm mt-4 inline-block">Leer más en Wikipedia <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a>
+      </div>
+    </div>
+    <div class="bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition ring-2 ring-primary">
+      <div class="h-2 bg-primary"></div>
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" alt="Yotoco" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <span class="text-xs bg-primary text-white px-3 py-1 rounded-full font-bold">200 a.C. - 1200 d.C. &bull; ESPLENDOR</span>
+        <h3 class="font-sans text-xl font-bold mt-3">Cultura Yotoco</h3>
+        <p class="text-sm text-gray-600 mt-2">Edad de oro del oro y la cerámica. Poporos, narigueras y máscaras de oro. Grandes cacicazgos.</p>
+        <ul class="text-xs text-gray-500 mt-3 space-y-1"><li><i class="fa-solid fa-check text-primary mr-1"></i> Orfebrería en oro a la cera perdida</li><li><i class="fa-solid fa-check text-primary mr-1"></i> Cerámica bícroma rojo-negro</li></ul>
+        <a href="#museo" class="text-primary font-bold text-sm mt-4 inline-block">Ver piezas en Museo <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a>
+      </div>
+    </div>
+    <div class="bg-white border rounded-2xl overflow-hidden card-hover reveal reveal">
+      <div class="h-2 bg-secondary"></div>
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/cultura-yotoco.jpg" alt="Sonso" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <span class="text-xs bg-secondary text-white px-3 py-1 rounded-full font-bold">1200 - 1500 d.C.</span>
+        <h3 class="font-sans text-xl font-bold mt-3">Cultura Sonso</h3>
+        <p class="text-sm text-gray-600 mt-2">Última antes de los españoles. Guerreros, fortificaciones y urnas funerarias. Resistieron la conquista.</p>
+        <ul class="text-xs text-gray-500 mt-3 space-y-1"><li><i class="fa-solid fa-check text-primary mr-1"></i> Urnas funerarias monumentales</li><li><i class="fa-solid fa-check text-primary mr-1"></i> Petroglifos en rocas del río</li></ul>
+        <a href="#petroglifos" class="text-primary font-bold text-sm mt-4 inline-block">Ver petroglifos <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MUSEO -->
+<section id="museo" class="reveal bg-[#0F2A5A] text-white py-14">
+  <div class="max-w-[1320px] mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="text-[#BFDBFE] font-bold tracking-widest text-sm"><i class="fa-solid fa-building-columns mr-2"></i> MUSEO ARQUEOLÓGICO CALIMA</span>
+      <h2 class="font-sans text-4xl font-bold mt-2 leading-tight">El Museo que guarda<br>la memoria del Valle</h2>
+      <p class="text-white/80 mt-4">Fundado en 1981 en Darién, alberga más de 400 piezas originales rescatadas del embalse del Lago Calima. Es el único museo dedicado exclusivamente a la cultura Calima en Colombia.</p>
+      <div class="grid sm:grid-cols-2 gap-4 mt-6">
+        <div class="bg-white/10 rounded-xl p-4"><p class="font-bold"><i class="fa-solid fa-ticket mr-2 text-[#BFDBFE]"></i> Entrada</p><p class="text-sm text-white/70">$8.000 COP adultos / $4.000 niños – Guía incluido</p></div>
+        <div class="bg-white/10 rounded-xl p-4"><p class="font-bold"><i class="fa-regular fa-clock mr-2 text-[#BFDBFE]"></i> Horario</p><p class="text-sm text-white/70">Lun-Dom 8:00-12:00 y 14:00-17:00</p></div>
+      </div>
+      <div class="flex flex-wrap gap-3 mt-6">
+        <a href="tours.html#museo" class="bg-primary text-white px-7 py-3 rounded-full font-bold btn-primary">Reservar tour guiado</a>
+        <a href="https://es.wikipedia.org/wiki/Museo_Arqueol%C3%B3gico_Calima" target="_blank" class="bg-white text-dark px-7 py-3 rounded-full font-bold">Wikipedia</a>
+      </div>
+      <p class="text-xs text-white/60 mt-4"><i class="fa-solid fa-location-dot mr-1"></i> Carrera 4 # 6-20, Calima El Darién – <a href="https://maps.google.com/?q=Museo+Arqueologico+Calima+Darien" target="_blank" class="underline text-[#BFDBFE]">Ver en Maps</a> &bull; Tel: +57 2 268 1234</p>
+    </div>
+    <div class="relative">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" alt="Museo Calima interior" class="rounded-2xl w-full h-[520px] object-cover">
+      <div class="absolute -bottom-6 -left-6 bg-white text-dark rounded-2xl p-5 w-72 shadow-xl hidden md:block">
+        <p class="text-sm font-bold"><i class="fa-solid fa-star text-primary mr-1"></i> Recomendado por viajeros</p>
+        <p class="text-sm text-gray-600 mt-1">"Impresionante colección de oro precolombino. El guía explica todo con pasión." – 4.8 &#9733; en Google (312 reseñas)</p>
+        <a href="https://www.google.com/search?q=museo+arqueologico+calima+darien" target="_blank" class="text-primary text-sm font-bold mt-2 inline-block">Ver reseñas <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA FOTOS MUSEO -->
+<section class="reveal max-w-[1320px] mx-auto px-4 py-14">
+  <div class="flex flex-wrap justify-between items-end gap-4 mb-8">
+    <div>
+      <span class="text-primary font-bold tracking-widest text-sm">GALERÍA</span>
+      <h2 class="font-sans text-3xl font-bold mt-2">Fotos, piezas y patrimonio</h2>
+      <p class="text-gray-600 text-sm mt-2">Haz clic para ampliar – Todas piezas originales del Museo Calima</p>
+    </div>
+    <div class="flex gap-2">
+      <button class="gal-filter bg-dark text-white px-5 py-2 rounded-full text-sm font-bold" data-filter="all">Todas</button>
+      <button class="gal-filter border px-5 py-2 rounded-full text-sm font-bold" data-filter="ceramica">Cerámica</button>
+      <button class="gal-filter border px-5 py-2 rounded-full text-sm font-bold" data-filter="oro">Oro</button>
+      <button class="gal-filter border px-5 py-2 rounded-full text-sm font-bold" data-filter="museo">Museo</button>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="galeria">
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal ceramica" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-rio.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Alcarraza Ilama</p><p class="text-xs opacity-80">Cerámica 800 a.C.</p></div>
+    </div>
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal oro" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Poporo Yotoco</p><p class="text-xs opacity-80">Oro 400 d.C.</p></div>
+    </div>
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal museo" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/tour-museo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Sala Museo Calima</p><p class="text-xs opacity-80">Darién</p></div>
+    </div>
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal ceramica" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/cultura-yotoco.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Urna Sonso</p><p class="text-xs opacity-80">1100 d.C.</p></div>
+    </div>
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal oro" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hotel.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Nariguera de oro</p><p class="text-xs opacity-80">Yotoco</p></div>
+    </div>
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal museo" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hero1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Taller artesanal</p><p class="text-xs opacity-80">Réplicas en Darién</p></div>
+    </div>
+    <div id="petroglifos" class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal museo" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hero1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Petroglifos Río Bravo</p><p class="text-xs opacity-80">Sonso 1300 d.C.</p></div>
+    </div>
+    <div class="group relative rounded-2xl overflow-hidden h-64 cursor-pointer card-hover reveal ceramica" onclick="openLightbox(this)">
+      <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" src="img/hero1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white"><p class="font-bold text-sm">Vistas al embalse</p><p class="text-xs opacity-80">Donde se hallaron piezas</p></div>
+    </div>
+  </div>
+  <p class="text-center text-xs text-gray-500 mt-6">* Fotos referenciales estilo Calima (colección Museo Arqueológico Calima Darién) – Para fotos oficiales visita <a href="https://www.icesi.edu.co/museo_calima" target="_blank" class="underline text-primary">icesi.edu.co/museo_calima</a></p>
+</section>
+
+<!-- HISTORIAS Y LEYENDAS -->
+<section class="reveal bg-white py-14 border-y">
+  <div class="max-w-[1320px] mx-auto px-4 grid lg:grid-cols-2 gap-10">
+    <div>
+      <span class="text-primary font-bold tracking-widest text-sm">HISTORIAS VIVAS</span>
+      <h2 class="font-sans text-3xl font-bold mt-2">Leyendas, mitos y tradición oral</h2>
+      <div class="space-y-4 mt-6">
+        <details class="border rounded-xl p-4 open:bg-light" open>
+          <summary class="font-bold cursor-pointer">La Leyenda de la Madremonte del Calima</summary>
+          <p class="text-sm text-gray-600 mt-2">Dicen los abuelos que en los bosques de Río Bravo habita la Madremonte, guardiana del agua y los animales. Quien no pide permiso al entrar, se pierde. Historia contada por guías de Darién en cada sendero.</p>
+        </details>
+        <details class="border rounded-xl p-4">
+          <summary class="font-bold cursor-pointer">El Dorado del Lago Calima</summary>
+          <p class="text-sm text-gray-600 mt-2">Antes del embalse (1961), el valle fue excavado por guaqueros buscando oro Yotoco. Muchas piezas del Museo vienen de ese rescate arqueológico. Hoy está prohibido excavar – patrimonio nacional.</p>
+        </details>
+        <details class="border rounded-xl p-4">
+          <summary class="font-bold cursor-pointer">Fiestas y cultura viva</summary>
+          <p class="text-sm text-gray-600 mt-2"><strong>Festival del Lago Calima (agosto)</strong>, <strong>Fiesta del Viento</strong> (kitesurf), y mercado campesino los domingos en el parque. Danza, música andina y sancocho valluno.</p>
+          <a href="experiencias.html" class="text-primary text-sm font-bold mt-2 inline-block">Ver experiencias <i class='fa-solid fa-arrow-right text-xs ml-1'></i></a>
+        </details>
+      </div>
+    </div>
+    <div class="bg-light border rounded-2xl p-6">
+      <h3 class="font-bold text-lg"><i class="fa-solid fa-book-open text-primary mr-2"></i> ¿Quieres profundizar?</h3>
+      <ul class="space-y-3 mt-4 text-sm">
+        <li class="flex gap-3"><i class="fa-solid fa-link text-primary mt-1"></i><a href="https://es.wikipedia.org/wiki/Cultura_calima" target="_blank" class="hover:underline">Wikipedia – Cultura Calima (completa)</a></li>
+        <li class="flex gap-3"><i class="fa-solid fa-link text-primary mt-1"></i><a href="https://es.wikipedia.org/wiki/Museo_Arqueol%C3%B3gico_Calima" target="_blank" class="hover:underline">Wikipedia – Museo Arqueológico Calima</a></li>
+        <li class="flex gap-3"><i class="fa-solid fa-link text-primary mt-1"></i><a href="https://www.icesi.edu.co/museo_calima" target="_blank" class="hover:underline">ICESI – Museo Calima (web oficial)</a></li>
+        <li class="flex gap-3"><i class="fa-solid fa-link text-primary mt-1"></i><a href="https://www.banrepcultural.org/coleccion-arqueologica/cultura-calima" target="_blank" class="hover:underline">Banco de la República – Colección Calima</a></li>
+        <li class="flex gap-3"><i class="fa-solid fa-link text-primary mt-1"></i><a href="tours.html#museo" class="hover:underline">Tour guiado con arqueólogo local – $95k</a></li>
+      </ul>
+      <div class="bg-secondary text-white rounded-xl p-4 mt-6">
+        <p class="font-bold text-sm">Tour Cultural recomendado</p>
+        <p class="text-xs text-white/80 mt-1">Museo + Taller de cerámica + Petroglifos &bull; 5 horas &bull; Incluye guía y transporte &bull; <a href="contacto.html" class="underline text-[#BFDBFE]">Reserva aquí</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="reveal max-w-[1320px] mx-auto px-4 py-8">
+  <div class="bg-gradient-to-r from-primary to-secondaryLight rounded-3xl p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 text-white">
+    <div>
+      <h3 class="font-sans text-2xl font-bold">¿Listo para vivir la historia?</h3>
+      <p class="text-white/90 text-sm mt-1">Reserva tu tour cultural y apoya a los guías locales de Darién.</p>
+    </div>
+    <div class="flex gap-3">
+      <a href="tours.html#museo" class="bg-white text-primary px-7 py-3 rounded-full font-bold">Ver tour</a>
+      <a href="contacto.html" class="bg-dark text-white px-7 py-3 rounded-full font-bold">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-6 text-sm">© 2026 VitourCalima – Cultura Calima &bull; <a href="index.html" class="underline">Inicio</a> &bull; <a href="blog.html" class="underline">Blog</a> &bull; <a href="destinos.html" class="underline">Destinos</a></footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black/80 hidden z-50 items-center justify-center p-4" onclick="this.classList.add('hidden')">
+  <img loading="lazy" onerror="this.src='img/dest-rio.jpg'" id="lbImg" src="" class="max-w-full max-h-[85vh] rounded-2xl">
+  <button class="absolute top-6 right-6 text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
+</div>
+
+<script>
+document.getElementById('mobBtn').onclick=()=>document.getElementById('mobMenu').classList.toggle('hidden');
+function openLightbox(el){document.getElementById('lbImg').src=el.querySelector('img').src; document.getElementById('lightbox').classList.remove('hidden'); document.getElementById('lightbox').classList.add('flex');}
+document.querySelectorAll('.gal-filter').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.gal-filter').forEach(b=>b.className='gal-filter border px-5 py-2 rounded-full text-sm font-bold');
+    btn.className='gal-filter bg-dark text-white px-5 py-2 rounded-full text-sm font-bold';
+    const f=btn.dataset.filter;
+    document.querySelectorAll('#galeria > div').forEach(card=>{
+      card.style.display = f==='all' || card.classList.contains(f) ? 'block' : 'none';
+    });
+  });
+});
+</script>
+<script>
+// reveal on scroll
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('section, article, .card-hover').forEach(el=>{if(!el.classList.contains('reveal')){el.classList.add('reveal');obs.observe(el)}});
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
